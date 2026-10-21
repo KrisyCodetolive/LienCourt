@@ -10,6 +10,7 @@ npm test           # test de bout en bout, sans dépendance
 
 ## Déploiement normal
 - Pas de Dockerfile : la plateforme le détecte comme une application Node (script `start`), port **3000**.
+- `nixpacks.toml` réduit le build au strict nécessaire : Node seul (sans l'overlay npm), aucune installation (il n'y a aucune dépendance), démarrage direct `node server.js`. Premier build ≈ 2 min (Nix installe Node, c'est le coût de la plateforme), puis ≈ 35 s grâce au cache des couches.
 - Sonde de santé : `GET /` (la landing) et `GET /healthz`.
 - Les liens sont gardés dans `data/links.json`, ou en mémoire si le disque est en lecture seule.
 

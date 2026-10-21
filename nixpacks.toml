@@ -1,0 +1,11 @@
+# Build minimal : LienCourt n'a aucune dépendance, il n'y a donc rien à installer ni à compiler.
+# Seul Node est nécessaire (sans l'overlay npm, qui ajoute un téléchargement) ; le démarrage est direct.
+[phases.setup]
+nixPkgs = ["nodejs_22"]
+nixOverlays = []
+
+[phases.install]
+cmds = []
+
+[start]
+cmd = "node server.js"
