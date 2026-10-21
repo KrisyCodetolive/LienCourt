@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LienCourt — des liens courts, des clics comptés</title>
+<meta name="description" content="Raccourcissez un lien en une seconde et suivez ses clics. Sans compte, sans carte bancaire.">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="30" height="30"><span>Lien<b>Court</b></span></a>
+  <nav>
+    <a href="#fonctions">Fonctions</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#faq">Questions</a>
+    <a class="btn small" href="#essai">Essayer</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="pill">Gratuit · sans compte</p>
+    <h1>Des liens courts.<br><span>Des clics comptés.</span></h1>
+    <p class="lead">Collez une adresse, obtenez un lien à partager, et voyez en direct combien de personnes l'ouvrent.</p>
+
+    <form id="essai" class="shorten" autocomplete="off">
+      <input id="url" type="url" inputmode="url" placeholder="https://exemple.com/une-adresse-tres-longue" aria-label="Adresse à raccourcir" required>
+      <button class="btn" type="submit">Raccourcir</button>
+    </form>
+    <p id="error" class="error" role="alert" hidden></p>
+    <div id="result" class="result" hidden>
+      <span class="label">Votre lien</span>
+      <a id="short" href="#" target="_blank" rel="noopener"></a>
+      <button id="copy" class="btn ghost small" type="button">Copier</button>
+    </div>
+  </section>
+
+  <section id="fonctions" class="features">
+    <h2>Simple, et ça suffit</h2>
+    <div class="grid">
+      <article><div class="ico">⚡</div><h3>Instantané</h3><p>Le lien est prêt en une fraction de seconde, sans page de chargement ni publicité.</p></article>
+      <article><div class="ico">📈</div><h3>Clics comptés</h3><p>Chaque ouverture est comptée. Le tableau ci-dessous se met à jour tout seul.</p></article>
+      <article><div class="ico">🔒</div><h3>Sans compte</h3><p>Aucune inscription, aucune donnée personnelle. Vous collez, vous partagez.</p></article>
+    </div>
+  </section>
+
+  <section class="steps">
+    <h2>Comment ça marche</h2>
+    <ol>
+      <li><span>1</span><div><h3>Collez</h3><p>Une adresse http ou https, aussi longue soit-elle.</p></div></li>
+      <li><span>2</span><div><h3>Partagez</h3><p>Copiez le lien court et envoyez-le où vous voulez.</p></div></li>
+      <li><span>3</span><div><h3>Suivez</h3><p>Revenez voir les clics en temps réel.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="live">
+    <div class="live-head">
+      <h2>Derniers liens créés</h2>
+      <span id="total" class="muted"></span>
+    </div>
+    <div class="table" role="table" aria-label="Derniers liens">
+      <div class="row head" role="row"><span>Lien</span><span>Destination</span><span>Clics</span></div>
+      <div id="rows"></div>
+      <p id="empty" class="muted empty">Aucun lien pour l'instant : créez le premier ci-dessus.</p>
+    </div>
+  </section>
+
+  <section id="tarifs" class="pricing">
+    <h2>Des tarifs honnêtes</h2>
+    <div class="grid two">
+      <article class="plan"><h3>Gratuit</h3><p class="price">0 <small>€ / mois</small></p><ul><li>Liens illimités pour la démo</li><li>Compteur de clics</li><li>Sans compte</li></ul><a class="btn ghost" href="#essai">Commencer</a></article>
+      <article class="plan best"><h3>Pro <em>bientôt</em></h3><p class="price">5 <small>€ / mois</small></p><ul><li>Noms de liens personnalisés</li><li>Statistiques par pays</li><li>Votre propre domaine</li></ul><a class="btn" href="#faq">Me prévenir</a></article>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <h2>Questions fréquentes</h2>
+    <details><summary>Mes liens expirent-ils ?</summary><p>Pas pendant la démo. Ils sont conservés tant que le service tourne.</p></details>
+    <details><summary>Que se passe-t-il si je crée trop de liens ?</summary><p>Une limite de 30 liens par minute protège le service. Au-delà, patientez un instant.</p></details>
+    <details><summary>Puis-je raccourcir n'importe quelle adresse ?</summary><p>Toute adresse commençant par http:// ou https://. Les autres sont refusées.</p></details>
+  </section>
+</main>
+
+<footer>
+  <span>© LienCourt · un petit SaaS de démonstration</span>
+  <span class="muted">Hébergé avec GeniusDeploy</span>
+</footer>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>

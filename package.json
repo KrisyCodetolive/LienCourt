@@ -1,0 +1,13 @@
+{
+  "name": "liencourt",
+  "version": "1.0.0",
+  "description": "LienCourt : un mini SaaS de liens courts, sans dépendance, pour tester GeniusDeploy.",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
