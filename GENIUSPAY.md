@@ -30,7 +30,7 @@ Never commit real keys — use environment variables.
 
 ## Notes
 
-Unsupported stack (node): plan limited to an integration guide.
+Unsupported stack (node): plan limited to an integration guide. [llm_LLM_ERROR]
 
 ## Reviewed snippet — checkout_initiate
 
