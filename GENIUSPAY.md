@@ -1,11 +1,11 @@
 # GeniusPay integration guide
 
-This repository stack (unrecognized) has no automated integration yet. Follow the steps below; the reviewed code snippets for your selected surfaces are embedded at the end.
+This repository stack (node) has no automated integration yet. Follow the steps below; the reviewed code snippets for your selected surfaces are embedded at the end.
 
 ## Confirmed payment workflow
 
 1. Le client déclenche le paiement dans votre application ; l'encaissement a lieu avant la livraison ou la prestation (prépayé).
-2. Votre serveur appelle POST /v2/payments/initiate (clé pk_* côté serveur uniquement, idempotency_key unique par tentative, fee_bearer "merchant" — les frais sont à votre charge).
+2. Votre serveur node appelle POST /v2/payments/initiate (clé pk_* côté serveur uniquement, idempotency_key unique par tentative, fee_bearer "merchant" — les frais sont à votre charge).
 3. Le client est redirigé vers le checkout hébergé GeniusPay (checkout_url, valide 15 min), y choisit son moyen de paiement (wave, orange_money), puis revient sur votre URL de succès (success_url).
 4. GeniusPay notifie le endpoint webhook créé pour vous (transaction.completed / failed) — après vérification de la signature HMAC et déduplication, votre serveur déclenche la livraison / l'activation.
 
@@ -30,7 +30,7 @@ Never commit real keys — use environment variables.
 
 ## Notes
 
-Unsupported stack (unknown): plan limited to an integration guide.
+Unsupported stack (node): plan limited to an integration guide.
 
 ## Reviewed snippet — checkout_initiate
 
